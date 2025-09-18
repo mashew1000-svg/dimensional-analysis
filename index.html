@@ -33,7 +33,16 @@
             </div>
         </div>
         <script>
-            const units=[[1]]
+            const units=new Map([[["m","cm"],100],[["km","m"],1000]])
+            function getFracConv(c1,c2){
+                function rec(cc1,cc2,skip){
+                    for(var i in units.keys()){
+                        if(!i.includes(cc1) || skip.includes(i[0] || skip.includes(i[1]))){
+                            
+                        }
+                    }
+                }
+            }
         </script>
     </body>
 </html>
