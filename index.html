@@ -16,7 +16,7 @@
             }
             .textbox {
                 background-color:#fafafa;
-                
+                height:calc(100%-50px);
                 margin-left:5px;
                 margin-bottom:5px;
                 margin-top:5px;
@@ -38,8 +38,13 @@
                 function rec(cc1,cc2,skip){
                     for(var i in units.keys()){
                         if(!i.includes(cc1) || skip.includes(i[0] || skip.includes(i[1]))){
-                            
+                            continue
                         }
+                        if(i.includes(cc2)){
+                            return [i]
+                        }
+                        
+                        
                     }
                 }
             }
