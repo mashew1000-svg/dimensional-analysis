@@ -36,6 +36,7 @@
             const units=new Map([[["m","cm"],100],[["km","m"],1000]])
             function getFracConv(c1,c2){
                 function rec(cc1,cc2,skip){
+                    let lits=[]
                     for(var i in units.keys()){
                         if(!i.includes(cc1) || skip.includes(i[0] || skip.includes(i[1]))){
                             continue
@@ -43,7 +44,9 @@
                         if(i.includes(cc2)){
                             return [i]
                         }
-                        
+                        if(i[0]==1){
+                            
+                        }
                         
                     }
                 }
